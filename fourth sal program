@@ -1,0 +1,15 @@
+CREATE TABLE employee
+(
+  eid number(3) primary key,
+  ename varchar2(30) not null,
+  designation varchar2(40),
+  department varchar2(50),
+  salary number(5) check(salary>=40000),
+  joining_date DATE
+);
+INSERT INTO employee values(101,'srinu','Project Manager','Management',90000,TO_DATE('12-06-2020','DD-MM-YYYY'));
+INSERT INTO employee values(102,'Raja Reddy','Software Enginner','Development',60000,TO_DATE('23-08-2016','DD-MM-YYYY'));
+INSERT INTO employee values(103,'Mahendra Reddy','Tester','QA',45000,TO_DATE('10-10-2018','DD-MM-YYYY'));
+INSERT INTO employee values(104,'Mamatha','Business Analyst','Analysis',70000,TO_DATE('05-07-2023','DD-MM-YYYY'));
+INSERT INTO employee values(105,'Kiran','UI Designer','Design',55000,TO_DATE('12-11-2023','DD-MM-YYYY'));
+select * from employee;
